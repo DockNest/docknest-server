@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/DockNest/docknest-server/pkg/docker"
-	"github.com/DockNest/docknest-server/pkg/handlers"
+	"github.com/DockNest/server/pkg/docker"
+	"github.com/DockNest/server/pkg/handlers"
 )
 
 type alias string
@@ -20,7 +20,7 @@ func main() {
 
 	port := ":8891"
 	log.Println("Listening on port ", port)
-	http.HandleFunc("/shipyard", handlers.ShipyardCommand)
+	http.HandleFunc("/docknest", handlers.DocknestCommand)
 
 	log.Fatal(http.ListenAndServe(port, nil))
 }

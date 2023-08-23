@@ -2,7 +2,7 @@ package handlers
 
 import (
 	"encoding/json"
-	"github.com/DockNest/docknest-server/pkg/docker"
+	"github.com/DockNest/server/pkg/docker"
 	"log"
 	"net/http"
 )
@@ -15,7 +15,7 @@ type RequestedCommand struct {
 	Test        bool
 }
 
-func ShipyardCommand(w http.ResponseWriter, r *http.Request) {
+func DocknestCommand(w http.ResponseWriter, r *http.Request) {
 	var reqCmd RequestedCommand
 
 	err := json.NewDecoder(r.Body).Decode(&reqCmd)

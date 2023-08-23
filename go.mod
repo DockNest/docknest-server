@@ -1,4 +1,4 @@
-module github.com/DockNest/docknest-server
+module github.com/DockNest/server
 
 go 1.20
 

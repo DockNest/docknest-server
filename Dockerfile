@@ -6,6 +6,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN go build -o shipyard-server
+RUN go build -o docknest-server
 
-ENTRYPOINT ["/app/shipyard-server"]
+ENTRYPOINT ["/app/docknest-server"]
